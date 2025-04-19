@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Champion Quote Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .correct { background-color: #28a745; }
+    .wrong { background-color: #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>Guess the Champion</h1>
+  <p id="quote">"Fear the power you do not see."</p>
+
+  <div id="choices">
+    <button onclick="checkAnswer(this)">Zed</button>
+    <button onclick="checkAnswer(this)">Lux</button>
+    <button onclick="checkAnswer(this)">Thresh</button>
+    <button onclick="checkAnswer(this)">Ahri</button>
+  </div>
+
+  <p id="result"></p>
+  <br>
+  <a href="scratch.html">Back to Scratch Page</a>
+
+  <script>
+    const questions = [
+      {
+        quote: '"Fear the power you do not see."',
+        answer: 'Zed',
+        choices: ['Zed', 'Lux', 'Thresh', 'Ahri']
+      },
+      {
+        quote: '"The balance of power must be preserved."',
+        answer: 'Karma',
+        choices: ['Karma', 'Jinx', 'Nautilus', 'Vayne']
+      },
+      {
+        quote: '"Time is not on your side."',
+        answer: 'Ekko',
+        choices: ['Ekko', 'Zilean', 'Orianna', 'Jayce']
+      }
+    ];
+
+    let current = 0;
+
+    function loadQuestion() {
+      const q = questions[current];
+      document.getElementById('quote').textContent = q.quote;
+      const choicesDiv = document.getElementById('choices');
+      choicesDiv.innerHTML = '';
+      q.choices.forEach(choice => {
+        const btn = document.createElement('button');
+        btn.textContent = choice;
+        btn.onclick = () => checkAnswer(btn);
+        choicesDiv.appendChild(btn);
+      });
+      document.getElementById('result').textContent = '';
+    }
+
+    function checkAnswer(btn) {
+      const answer = questions[current].answer;
+      if (btn.textContent === answer) {
+        btn.classList.add('correct');
+        document.getElementById('result').textContent = 'Correct!';
+      } else {
+        btn.classList.add('wrong');
+        document.getElementById('result').textContent = `Wrong! Correct answer: ${answer}`;
+      }
+      setTimeout(() => {
+        current = (current + 1) % questions.length;
+        loadQuestion();
+      }, 2000);
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>

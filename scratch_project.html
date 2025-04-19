@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League of Legends Fun Page</title>
+
+  <!-- Embedding CSS directly in the HTML -->
+  <style>
+    /* General body styling */
+    body {
+      background-color: #0a0a23;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling for the header */
+    .header-div {
+      padding: 20px;
+      background-color: #11113a;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+
+    .header-div h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffcc00;
+    }
+
+    .header-div p {
+      font-size: 1.2rem;
+    }
+
+    /* Styling for the main content */
+    .content-div {
+      margin: 30px;
+      font-size: 1.1rem;
+    }
+
+    /* Styling for h2 headings */
+    h2 {
+      color: #ffcc00;
+      font-size: 1.8rem;
+      margin-top: 30px;
+    }
+
+    /* Styling for ordered lists */
+    ol {
+      font-size: 1.1rem;
+    }
+
+    /* Styling for the image */
+    img {
+      border: 5px solid #444;
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* Styling for the links (buttons) */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Styling for the tableau placeholder */
+    .tableauPlaceholder {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .tableauViz {
+      width: 100%;
+      max-width: 1400px;
+      height: 927px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="top" class="header-div">
+    <h1>League of Legends Central</h1>
+    <p>Explore champions, watch epic plays, and test your knowledge.</p>
+    <a href="index.html">Back to Portfolio</a>
+  </div>
+
+  <div class="content-div">
+    <h2>Top Champions</h2>
+    <ol>
+      <li>Top Lane
+        <ul>
+          <li>Darius</li>
+          <li>Garen</li>
+        </ul>
+      </li>
+      <li>Mid Lane
+        <ul>
+          <li>Ahri</li>
+          <li>Yasuo</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Epic Play</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1LJxF3vTymA" title="League of Legends Play" frameborder="0" allowfullscreen></iframe>
+
+    <h2>Favorite Champion Art</h2>
+    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt="Yasuo" width="500">
+
+    <h2 id="tableau">League Stats Tableau</h2>
+    <div class="tableauPlaceholder">
+      <!-- Embed your Tableau Public viz here -->
+      <p><div class='tableauPlaceholder' id='viz1745083154680' style='position: relative'><noscript><a href='#'><img alt='Main Dashboard Dark Mode ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LeagueofLegendsUserDashboard&#47;MainDashboardDarkMode&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='LeagueofLegendsUserDashboard&#47;MainDashboardDarkMode' /><param name='tabs' value='no' /> <param name='toolbar' value='yes' /> <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Le&#47;LeagueofLegendsUserDashboard&#47;MainDashboardDarkMode&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='utm_source=chatgpt.com' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1745083154680');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1400px';vizElement.style.height='927px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
+    </div>
+
+    <h2><a href="#top">Back to Top</a></h2>
+
+    <h2>Mini App</h2>
+    <a href="quiz.html">Try the Champion Quote Quiz</a>
+  </div>
+</body>
+</html>
